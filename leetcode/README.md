@@ -45,3 +45,17 @@ workspace的改动需要git add至staging area，可能会多次执行git add，
 2、若workspace文件修改后且git add; 
     则先git restore --staged *.file，将改动从staging area撤回，
     然后git restore *.file， 使workspace文件恢复至local repository状态；
+
+
+
+1、新建b.txt, 修改内容后， git add & commit; 将改动提交到repo;
+2、修改b.txt，然后 git add; 然后再修改b.txt, 此时欲恢复， git restore b.txt； 这时候恢复的内容是上次git add所记录的内容，即将暂存区的内容恢复至工作区；
+3、欲撤销提交到暂存区的改动，git restore --staged b.txt; 此时暂存区就恢复成repo里的内容，然后再次 git restore b.txt; 此时工作区的内容恢复至与 repo 一致；
+
+git restore --staged  //将暂存区恢复成repo
+git restore // 将工作区恢复成暂存区内容
+上面两条依次执行， 将工作区恢复成repo
+
+
+1.readme.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。
+2.另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。
