@@ -59,3 +59,6 @@ git restore // 将工作区恢复成暂存区内容
 
 1.readme.txt自动修改后，还没有放到暂存区，使用 撤销修改就回到和版本库一模一样的状态。
 2.另外一种是readme.txt已经放入暂存区了，接着又作了修改，撤销修改就回到添加暂存区后的状态。
+
+
+git push origin dev // 将dev分支推送至远程origin
