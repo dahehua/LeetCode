@@ -1,4 +1,3 @@
-
 public class lengthOfLongestSubstring {
     
     public static int solution(String s) {
